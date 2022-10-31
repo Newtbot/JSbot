@@ -15,11 +15,11 @@ const client = new Client({
 client.commands = new Collection();
 
 //Token
-client.login("MTAwNzkzMTMxNjA1MTkxNDc5Mg.GmiqFw.kYLQRde-vH20kkySNH6xMAMMpoRI8DK_ZF_TsI")
+client.login("token")
 
 //bot details
 const bot = mineflayer.createBot({
-    host: "corejourney.org",
+    host: "ip",
     //port:1262,
     username: process.env.EMAIL,
     password: process.env.PASSWORD,
@@ -37,14 +37,6 @@ bot.on('chat', (username, message ,pos) => {
     }
   }
   )
-  //if user says ayaya. Bot replys AYAYA
-  bot.on('chat', (username, message ,pos) => {
-    if (message === 'ayaya') {
-      bot.chat(`AYAYA`)
-    }
-  }
-  )
-
 // Redirect Discord messages to in-game chat
 client.on('messageCreate', message => {
     if (message.author.id == client.user.id) return
